@@ -4,6 +4,10 @@
         {{ form_widget(form) }}
         {{ form_errors(form) }}
     </div>
+{% endblock %}
+
+{% block simplemde_editor_widget %}
+    {{ block('textarea_widget') }}
     <script type="text/javascript">
         $('document').ready(function()
         {
