@@ -1,0 +1,23 @@
+{% block simplemde_editor_row %}
+<div class="form-group">
+    {{ form_label(form) }}
+    {{ form_widget(form) }}
+    {{ form_errors(form) }}
+</div>
+<script type="text/javscript">
+    var cssId = 'simpleMDE_theme';
+    var jsId = 'simpleMDE_script';
+    if(!$('#'+ssId)) {
+        $('head').append('<link rel="stylesheet" type="text/css" id="'+ssId+'" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css" crossorigin="anonymous" />');
+    }
+
+    if(!$('#'+jsId)) {
+        $('head').append('<script type="text/javascript" id="'+jsId+'" src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js" crossorigin="anonymous"></script>');
+    }
+
+    $(document).ready(function()
+    {
+        var simplemde_{{ id }} = new SimpleMDE({ element: $("#{{ id }}")[0] });
+    });
+</script>
+{% endblock %}
