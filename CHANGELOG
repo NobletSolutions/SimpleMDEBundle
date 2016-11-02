@@ -3,5 +3,6 @@ VERSION 1  INITIAL RELEASE
 ==========================
 
    Version 1.0 - Initial release
+      02/11/2016 16:31  1.0.2  More config handling
       02/11/2016 15:48  1.0.1  Added spellchecker option handling
       01/11/2016 16:55  1.0.0  initial release
