@@ -35,6 +35,7 @@ class MarkdownEditorType extends AbstractType
             'parsingConfig',
             'placeholder',
             'previewRender',
+            'promptURLs',
             'renderingConfig',
             'shortcuts',
             'showIcons',
@@ -54,8 +55,20 @@ class MarkdownEditorType extends AbstractType
     {
         $editor_config = [];
 
-        if (isset($options['spellChecker']) && $options['spellChecker'] === false) {
-            $editor_config['spellChecker'] = false;
+        if (isset($options['tabSize']) && $options['tabSize'] !== 2) {
+            $editor_config['tabSize'] = $options['tabSize'];
+        }
+
+        foreach (['indentWithTabs', 'lineWrapping', 'spellChecker', 'styleSelectedText'] as $defaultTrueOption) {
+            if (isset($options[$defaultTrueOption]) && $options[$defaultTrueOption] === false) {
+                $editor_config[$defaultTrueOption] = false;
+            }
+        }
+
+        foreach (['autofocus', 'forceSync', 'promptURLs'] as $defaultFalseOption) {
+            if (isset($options[$defaultFalseOption]) && $options[$defaultFalseOption] === true) {
+                $editor_config[$defaultFalseOption] = true;
+            }
         }
 
         $view->vars['editor_config'] = json_encode($editor_config);
