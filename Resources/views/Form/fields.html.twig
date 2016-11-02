@@ -9,9 +9,10 @@
 {% block simplemde_editor_widget %}
     {{ block('textarea_widget') }}
     <script type="text/javascript">
-        $('document').ready(function()
-        {
-            var simplemde_test = new SimpleMDE({ element: $("#{{ id }}")[0] });
+        $('document').ready(function() {
+            var element = $("#{{ id }}")[0];
+            var config = {{ form.vars.editor_config|raw}};
+            var simplemde_test = new SimpleMDE(Object.assign(config, {'element': element}));
         });
     </script>
 {% endblock %}
