@@ -1,7 +1,7 @@
 {
     "name": "ns/simplemde-bundle",
     "type": "symfony-bundle",
-    "description": "This bundle provides the simplemde markdown editor",
+    "description": "This bundle provides the simplemde markdown editor and forms to a symfony bundle",
     "minimum-stability": "stable",
     "license": "MIT",
     "authors": [
@@ -22,7 +22,7 @@
         "psr-4": { "NS\\SimpleMDEBundle\\": "src" }
     },
     "autoload-dev": {
-        "psr-4": { "NS\\DistanceBundle\\": "Tests" }
+        "psr-4": { "NS\\SimpleMDEBundle\\Tests\\": "tests" }
     },
     "extra": {
         "branch-alias": {
