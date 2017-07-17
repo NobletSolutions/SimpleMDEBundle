@@ -41,7 +41,7 @@ class MarkdownEditorType extends AbstractType
             'showIcons',
             'spellChecker',
             'status',
-            'styleSelectedText' .
+            'styleSelectedText',
             'tabSize',
             'toolbar',
             'toolbarTips',
@@ -54,6 +54,18 @@ class MarkdownEditorType extends AbstractType
     public function buildView(FormView $view, FormInterface $form, array $options)
     {
         $editor_config = [];
+
+        if (isset($options['hideIcons'])) {
+            $editor_config['hideIcons'] = $options['hideIcons'];
+        }
+
+        if (isset($options['placeholder'])) {
+            $editor_config['placeholder'] = $options['placeholder'];
+        }
+
+        if (isset($options['showIcons'])) {
+            $editor_config['showIcons'] = $options['showIcons'];
+        }
 
         if (isset($options['tabSize']) && $options['tabSize'] !== 2) {
             $editor_config['tabSize'] = $options['tabSize'];
