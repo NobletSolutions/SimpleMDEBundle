@@ -18,7 +18,7 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $treeBuilder->root('simplemde');
+        $treeBuilder->root('ns_simplemde');
         return $treeBuilder;
     }
 }
