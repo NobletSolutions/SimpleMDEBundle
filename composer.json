@@ -16,8 +16,9 @@
     ],
     "require": {
         "php":                       ">=5.5.9",
-        "symfony/framework-bundle":           "^2.8|^3.0|^4.0",
-        "symfony/form":           "^2.8|^3.0|^4.0"
+        "symfony/framework-bundle":  "^2.8|^3.0|^4.0",
+        "symfony/form":              "^2.8|^3.0|^4.0",
+        "ext-json":                  "*"
     },
     "autoload": {
         "psr-4": { "NS\\SimpleMDEBundle\\": "src" }

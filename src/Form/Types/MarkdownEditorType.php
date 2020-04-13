@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: gnat
- * Date: 01/11/16
- * Time: 2:18 PM
- */
 
 namespace NS\SimpleMDEBundle\Form\Types;
 
@@ -16,11 +10,6 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class MarkdownEditorType extends AbstractType
 {
-    /**
-     * Configures the options for this type.
-     *
-     * @param OptionsResolver $resolver The resolver for the options
-     */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefined([
@@ -48,9 +37,6 @@ class MarkdownEditorType extends AbstractType
         ]);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function buildView(FormView $view, FormInterface $form, array $options)
     {
         $editor_config = [];

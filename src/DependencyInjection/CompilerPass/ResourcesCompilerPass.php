@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: gnat
- * Date: 01/11/16
- * Time: 2:40 PM
- */
 
 namespace NS\SimpleMDEBundle\DependencyInjection\CompilerPass;
 
@@ -19,7 +13,7 @@ class ResourcesCompilerPass implements CompilerPassInterface
             $container->setParameter(
                 $parameter,
                 array_merge(
-                    array('NSSimpleMDEBundle:Form:fields.html.twig'),
+                    array('@NSSimpleMDE/Form/fields.html.twig'),
                     $container->getParameter($parameter)
                 )
             );
